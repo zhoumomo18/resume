@@ -1,7 +1,8 @@
 body {
     background: rgba(0, 0, 0, 0.9);
     margin: 0;
-    background: #efefef;
+    background: #fff;
+    height: 3000px;
   }
    *{
      margin: 0;
@@ -43,7 +44,7 @@ body {
   }
   .topNavBar > .topNavBar-inner > nav > ul > li > a {
     font-size: 12px;
-    color: #b7b7b7;
+    color: #fff;
     font-weight: bold;
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
@@ -52,7 +53,7 @@ body {
     display: block;
   }
   .topNavBar > .topNavBar-inner > nav > ul > li > a:hover {
-    border-bottom: 3px solid #e06567;
+    border-bottom: 3px solid skyblue;
   }
   
   .topNavBar .logo {
@@ -63,26 +64,32 @@ body {
   }
   .topNavBar .logo .rs {
     margin-right: 4px;
-    color: #e6686a;
+    color: skyblue;
   }
   .topNavBar .logo .card {
-    color: #b7b7b7;
+    color: #fff;
   }
 
   .banner {
     height: 515px;
     background: url(./img/bag.jpg) ;  
     background-size:cover; 
+    
   }
   .mask {
     height: 515px;
     background-color: rgba(0, 0, 0, 0.6);
   }
 
+  body > main {
+    margin-top: -300px;
+  }
   main >.useCard {
     max-width: 940px;
     margin: 0 auto; 
     background: #ffffff;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, .5);
+
   }
 
   main >.useCard > .pictureAndText {
@@ -97,6 +104,7 @@ body {
     width: 299px;
     height: 347px;
     border-radius: 10px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, .5);
   }
 
   main >.useCard > .pictureAndText>.text {
@@ -109,7 +117,7 @@ body {
     display: inline-block;
     line-height: 22px;
     padding: 4px 16px;
-    background: #e6686a;
+    background: skyblue;
     color: #fff;
     position: relative;
   }
@@ -117,7 +125,7 @@ body {
     display: block;
     border: 10px solid transparent;
     width: 0px;
-    border-left-color: #e6686a;
+    border-left-color: skyblue;
     border-top-width: 0px;
     position: absolute;
     left: 5px;
@@ -149,7 +157,7 @@ body {
   }
 
   .useCard > footer.media{
-    background: #E6686A;
+    background: skyblue;
     text-align: center;
   }
   .useCard > footer.media > a{
@@ -161,7 +169,7 @@ body {
     margin: 16px;
   }
   .useCard > footer.media > a:hover{
-    background: #CF5D5F;
+    background: skyblue;
   }
   .useCard svg{
     width: 30px;
@@ -169,3 +177,135 @@ body {
     fill: white;
     vertical-align: top;
   }
+
+  main  .downloadResume-wrapper {
+    text-align: center;
+    margin:0 auto;
+  }
+
+  main  .downloadResume {
+   font-size: 16px;
+   line-height: 16px;
+   padding: 21px 55px;
+   border: 1px solid #ccc;
+   display: inline-block;
+   border-radius: 2px;
+   background: #EFEFEF;
+   font-weight: bold;
+   margin: 34px 0;
+   transition:  box-shadow 0.5s;
+  }
+  main  .downloadResume:hover {
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, .2);
+  }
+
+  main .SelfIntroductio {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 960px;
+  }
+  
+  section.skill {
+    margin-top: 60px;
+  }
+
+  section.skill > header {
+    text-align: center;
+  }
+  section.skill h2{
+    margin-bottom: 30px;
+  }
+
+  section.skill .content {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, .5); 
+    margin-bottom:70px; 
+  }
+
+  section.skill .content ul{
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  section.skill .content li{
+    float: left;
+    width: 47%;
+    margin: 10px;
+  }
+  
+
+  section.skill > .content li {
+    padding: 5px 0;
+  }
+  section.skill > .content .bar {
+    width: 100%;
+    background:rgb(250, 241, 241);
+    height: 5px;
+  }
+
+  section.skill > .content .realBar {
+    background: skyblue;
+    height: 5px;
+    border-radius: 3px;
+  }
+
+  section.production {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 960px;
+  }
+
+  section.production h2{
+    margin-bottom: 30px;
+  }
+
+
+  section.production nav{
+    text-align: center;
+  }
+
+  section.production>nav>ol{
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: top;
+  }
+  section.production>nav>ol>li{
+    list-style: none;
+    float: left;
+    margin-left: 48px;
+  }
+  section.production>nav>ol>li:nth-child(1){
+    margin-left: 0;
+  }
+  section.production  .bar {
+    text-align: center;
+    display: block;
+    width: 280px;
+    height: 5px;
+    border-radius: 5px; 
+    background: #fff;
+    margin: 15px auto;
+  }
+  section.production  .realBar {
+    background: skyblue;
+    height: 5px;
+    border-radius: 3px;
+  }
+  
+  section.production  .works {
+    height: 597px;
+    border: 1px solid red;
+  }
+
+  section.production  .works .big {
+    position: relative;
+  }
+  
+
+
