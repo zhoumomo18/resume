@@ -1,0 +1,468 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #efefef;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style: none;
+}
+
+.topNavBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.topNavBar-inner {
+  padding: 30px 20px;
+  color: #c1c3c6;
+  transition: all linear 0.3s
+}
+
+.topNavBar .slide{
+  padding: 10px 20px;
+  background: white;
+  color: #3d4451;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.4);
+}
+.topNavBar .log {
+  display: block;
+  float: left;
+  font-family: "Microsoft YaHei UI";
+  font-weight: bolder;
+  padding: 1px 0;
+}
+
+.topNavBar .log .rs{
+  font-size: 28px;
+  color: skyblue;
+}
+.topNavBar .log .card{
+  padding-left: 2px;
+  font-size: 28px;
+  color: #9A9DA2;
+}
+.topNavBar nav {
+  float: right;
+}
+
+.topNavBar nav ul a {
+  display: block;
+  font-size: 13px;
+  padding: 10px 0;
+  color: inherit;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  position: relative;
+}
+.topNavBar nav ul li {
+  margin: 0 18px; 
+  float: left;
+  position: relative;
+}
+[data-x].active{
+  outline: 10px solid red;
+}
+[data-x].offset{
+  transform: translateY(100px);
+}
+[data-x]{
+  transform: translateY(0);
+  transition: all 0.5s; 
+}
+
+@keyframes slideUp{
+  0%{
+    transform: translateY(-3000px);
+  }
+  100%{
+    transform: translateY(0);skyblue
+  }
+}
+
+.topNavBar nav ul li.active > a::after,
+.topNavBar nav ul li.highlight>a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: skyblue;
+  animation: slidebar 0.25s linear;
+}
+
+@keyframes slidebar{
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+.topNavBar nav ul li ul {
+  position: absolute;
+  display: none;
+  margin-top: 3px;
+  top: 40px;
+  right: 0;
+  padding: 5px 0;
+  white-space: nowrap;
+  background: white;
+  color: black;
+  box-shadow: 0px 0px 24px -5px rgba(0, 0, 0, 0.6);
+  animation: menu 0.25s linear;
+}
+.topNavBar nav ul > li.active > ul{
+  display: block;
+}
+.topNavBar nav ul li ul li{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@keyframes menu{
+  from{
+    right: 100%; opacity: 0;
+  }
+  to{
+    right: 0; opacity: 1;
+  }
+}
+.banner {
+  height: 540px;
+  background: url("img/sky.jpg") no-repeat fixed center center;
+}
+
+.banner .mask {
+  height: 540px;
+ 
+}
+
+main{
+  max-width: 930px;
+  margin: 0 auto;
+}
+
+.usercard {
+  margin-left: auto;
+  margin-right: auto; 
+  margin-top: -350px; 
+  background-color: #fff;
+  box-shadow: 0px 0px 28px -8px rgba(0, 0, 0, 0.54);
+}
+
+.usercard .picture {
+  float: left;
+  margin-left: 50px;
+  margin-top: 57px; 
+  margin-bottom: 44px;
+}
+
+.usercard .text {
+  float: left;
+  margin-left: 64px;
+  margin-top: 57px;
+  width: 470px;
+  letter-spacing: 1.2px;
+}
+
+.usercard .text .welcom {
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  background-color: skyblue;
+  padding: 4px 15px;
+  line-height: 22px;
+  position: relative;
+}
+
+.usercard .text .welcom .triangle {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid skyblue;
+  border-right: 10px solid transparent;
+  position: absolute;
+  left: 4px;
+  top: 100%;
+}
+
+.usercard .text h1 {
+  margin-top: 27px;
+}
+
+.usercard .text p {
+  margin-top: 8px;
+  margin-bottom: 26px;
+}
+
+hr {
+  height: 0;
+  border: none;
+  border-top: 1px solid #DEDEDE;
+  margin-bottom: 18px;
+}
+
+.usercard .text dl dt,
+ .usercard .text dl dd {
+  float: left;
+  padding: 8px 0;
+}
+
+.usercard .text dl dt{
+  width: 30%;
+  font-weight: bold;
+}
+
+.usercard .text dl dd{
+  width: 70%;
+  color: #9da0a7;
+}
+
+.usercard footer {
+  padding: 20px 0;
+  background-color: skyblue;
+  text-align: center;
+}
+
+.usercard footer a {
+  display: inline-block;
+  width: 45px;
+  padding: 10px 0;
+  margin: 0 15px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.usercard footer a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.icon {
+  width: 25px;
+  height: 25px;
+  fill: white;
+  vertical-align: top;
+}
+
+body main .downloadResumewrapper {
+  margin: 35px 0;
+  text-align: center;
+}
+
+body main .downloadResume {
+  display: inline-block;
+  border: 1px solid #cbcdcf;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  padding: 21px 56px;
+  transition: box-shadow 1s;
+}
+
+body main .downloadResume:hover {
+  box-shadow: 0px 6px 26px -5px rgba(0, 0, 0, 0.54);
+}
+
+body main .selfInstruction {
+  margin: 5px auto 0;
+  max-width: 930px; 
+  text-align: center;
+  font-family: "楷体";
+  font-size: 18px;
+}
+
+section {
+  max-width: 930px;
+  margin: 80px auto 0;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 28px;
+  letter-spacing: 10px;
+}
+
+.skills .skillBar {
+  margin: 0 auto;
+  padding:43px 50px 11px;
+  font-size: 13px;
+  color: #3d4451;
+  background-color: #fff;
+  box-shadow: 0px 0px 28px -8px rgba(0, 0, 0, 0.54);
+}
+
+.skills .skillBar .out {
+  background-color: #FAE1E1E1;
+  height: 5px;
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.skills .skillBar .inner {
+  height: 100%;
+  width: 80%;
+  background-color: skyblue;
+  border-radius: 2px;
+  transform: translateX(0);
+  transition: all 1s;
+}
+
+.skills.offset .skillBar .inner{
+  transform: translateX(-100%);
+}
+.skills .skillBar li {
+  float: left;
+  width: 48%;
+  margin: 0 0 39px
+}
+.skills .skillBar li:nth-child(even) {
+  float: right;
+  width: 48%;
+}
+
+.portfolio nav {
+  margin: 0 auto;
+}
+
+.portfolio nav ol {
+  padding: 0 320px;
+}
+.portfolio nav li {
+  float: left;
+  margin-right: 65px;
+}
+
+.portfolio nav li:last-child{
+  float: right;
+  margin-right: 0;
+}
+.portfolio nav .scrollBar {
+  background-color: #fff;
+  height: 5px;
+  border-radius: 2px;
+  margin: 14px 320px 20px;
+}
+
+.portfolio nav .scrollBar .in {
+  width: 30px;
+  height: 100%;
+  background-color: skyblue;
+  border-radius: 2px;
+  transition: All 0.8s;
+}
+
+.portfolio nav .scrollBar.state1 .in {
+  width: 50px;
+  height: 100%;
+  background-color: skyblue;
+  border-radius: 2px;
+}
+
+.portfolio nav .scrollBar.state2 .in {
+  width: 110px;
+  height: 100%;
+  margin-left: 90px;
+  background-color: skyblue;
+  border-radius: 2px;
+}
+
+.portfolio nav .scrollBar.state3 .in {
+  width: 50px;
+  height: 100%;
+  margin-left: 240px;
+  background-color: skyblue;
+  border-radius: 2px;
+}
+
+.portfolio .productions {
+  position: relative;
+  height: 735px;
+  margin-bottom: 100px;
+}
+
+.portfolio .production1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.portfolio .production2 {
+  position: absolute;
+  top: 0;
+  left: 528px;
+}
+.portfolio .production3 {
+  position: absolute;
+  top: 282px;
+  left: 528px;
+}
+
+.swiper-container {
+  width: 800px;
+  height: 450px;
+}
+
+
+section#siteMessage > ol{
+  max-width: 700px;
+  margin: 0 auto;
+  border-top: 1px solid #DDD;
+}
+section#siteMessage > ol > li {
+  padding: 16px;
+  border-bottom: 1px solid #DDD;
+}
+section.form {
+  background: url("../img/sky.jpg") no-repeat fixed;
+  box-sizing: border-box;
+  margin-top: 200px;
+  padding: 30px 0;
+}
+
+section.form > div {
+  width: 960px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0px 0px 28px -8px rgba(0, 0, 0, 0.54);
+  border-radius: 5px;
+}
+
+section.form > div > ul {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+section.form > div > ul > li {
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+}
+
+section.form > div > form {
+  display: flex;
+}
+
+section.form > div > form > p {
+  flex: 1;
+  margin: 0 0 30px 100px;
+}
+

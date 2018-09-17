@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>resume</title>
+  <style type="text/css">
+    .loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loading.active {
+      display: none;
+    }
+
+    .dot {
+      width: 100px;
+      height: 100px;
+      position: relative;
+    }
+
+    .dot::before,
+    .dot::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.7);
+      animation: loading 2s linear infinite;
+    }
+
+    .dot::after {
+      animation-delay: 0.75s;
+    }
+
+    @keyframes loading {
+      0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+      }
+      100% {
+        width: 80px;
+        height: 80px;
+        opacity: 0;
+      }
+    }
+
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://at.alicdn.com/t/font_737576_gxgzm23wbo.js"></script>
+</head>
+
+<body>
+  <div id="loading" class="loading active">
+      <div class="dot"></div>
+    </div>
+  <div class="topNavBar">
+    <div id="stickyNavbar" class="topNavBar-inner clearfix">
+      <a class="log" href=# alt="log">
+        <span class="rs">RS</span>
+        <span class="card">card</span>
+      </a>
+      <nav>
+        <ul id="navbar" class="clearfix">
+          <li>
+            <a href="#siteAbout">关于</a>
+          </li>
+          <li>
+            <a href="#siteSkills">技能</a>
+            <ul class="skillslist">
+              <li>技能1</li>
+              <li>技能2</li>
+              <li>技能3</li>
+            </ul>
+          </li>
+          <li>
+            <a href="#siteWorks">作品</a>
+          </li>
+          <li>
+            <a href="#siteBlog">博客</a>
+            <ul class="bloglist">
+              <li>博客1</li>
+              <li>博客2</li>
+              <li>博客3</li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">日历</a>
+          </li>
+          <li>
+            <a href="#">联系方式</a>
+          </li>
+          <li>
+            <a href="#">其它</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="mask"></div>
+  </div>
+  <main data-x id="siteAbout">
+    <div class="usercard">
+      <div class="pictureAndText clearfix">
+        <div class="picture">
+          <img src="img/timg.jpg" alt="头像" style="width: 300px; height: 300px;">
+        </div>
+        <div class="text">
+          <span class="welcom">HELLO
+            <span class="triangle"></span>
+          </span>
+          <h1>周 桥</h1>
+          <p>前端开发工程师</p>
+          <hr>
+          <dl class="clearfix">
+            <dt>年龄</dt>
+            <dd>25</dd>
+            <dt>所在城市</dt>
+            <dd>武汉</dd>
+            <dt>邮箱</dt>
+            <dd>512641057@qq.com</dd>
+            <dt>手机</dt>
+            <dd>1546148545</dd>
+          </dl>
+        </div>
+      </div>
+      <footer class="media">
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-github"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-youxiang"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-yanzheng-jianshu"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-weixin"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-qq-copy"></use>
+          </svg>
+        </a>
+      </footer>
+    </div>
+    <p class="downloadResumewrapper">
+      <a href="./resume.PDF" class="downloadResume" download>下载 PDF 简历</a>
+    </p>
+    <p class="selfInstruction">
+      周桥：自我介绍
+    </p>
+  </main>
+  <section data-x id="siteSkills" class="skills">
+    <h2>技能</h2>
+    <ol class="skillBar clearfix">
+      <li>
+        HTML 5 &amp; CSS 3
+        <div class="out">
+          <div class="inner" style="width: 80%;"></div>
+        </div>
+      </li>
+      <li>
+        JavaScript
+        <div class="out">
+          <div class="inner" style="width: 90%;"></div>
+        </div>
+      </li>
+      <li>
+        HTTP
+        <div class="out">
+          <div class="inner" style="width: 60%;"></div>
+        </div>
+      </li>
+      <li>
+        jQuery
+        <div class="out">
+          <div class="inner" style="width: 40%;"></div>
+        </div>
+      </li>
+      <li>
+        Vue
+        <div class="out">
+          <div class="inner" style="width: 70%;"></div>
+        </div>
+      </li>
+      <li>
+        React
+        <div class="out">
+          <div class="inner" style="width: 60%;"></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+  <section data-x id="siteWorks" class="portfolio">
+    <h2>作品集</h2>
+    <!-- 轮播开始 -->
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <img class="swiper-slide" src="./img/timg.jpg">
+        <img class="swiper-slide" src="./img/img2.jpg">
+
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+  <section class="form">
+    <div>
+      <ul id="formUl">
+        <li>
+        </li>
+      </ul>
+      <form id="postMessage">
+        <p>用户名
+          <input id="formText" type="text" name="username">
+        </p>
+        <p>留言板
+          <input id="formTarea" name="content"></input>
+        </p>
+        <p>
+          <input id="formInput" type="submit" value="留言">
+        </p>
+      </form>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
+  <script src="main.js"></script>
+  <!-- 模块化 -->
+  <script src="Swiper.js"></script>
+  <script src="live-message.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
